@@ -1,27 +1,26 @@
-package com.example.thi_comand_work.presentation
+package com.example.thi_comand_work.presentation.singIn
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-
 import com.example.thi_comand_work.R
 
-class ForgotPassFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_forgot_pass, container, false)
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
     companion object {
 
         @JvmStatic
-        fun newInstance() = ForgotPassFragment()
+        fun newInstance() = ProfileFragment()
 
     }
 }

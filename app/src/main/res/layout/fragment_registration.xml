@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.RegistrationFragment">
+    tools:context=".presentation.auth.RegistrationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Имя:"
             android:textColor="#000000"
@@ -43,13 +44,14 @@
             android:id="@+id/editNameText"
             android:layout_width="208dp"
             android:layout_height="32dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginTop="36dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:inputType="text"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView" />
 
         <TextView
@@ -58,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="160dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Фамилия:"
             android:textColor="#000000"
@@ -71,13 +74,14 @@
             android:id="@+id/editSecondNameText"
             android:layout_width="208dp"
             android:layout_height="32dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:inputType="text"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editNameText" />
 
         <TextView
@@ -86,6 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="168dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Почта:"
             android:textColor="#000000"
@@ -99,13 +104,14 @@
             android:id="@+id/editEmailText"
             android:layout_width="208dp"
             android:layout_height="32dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:textColor="#060606"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editSecondNameText" />
 
         <TextView
@@ -114,6 +120,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="224dp"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Пароль:"
             android:textColor="#000000"
@@ -128,43 +135,47 @@
             android:layout_width="208dp"
             android:layout_height="32dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="60dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:inputType="textPassword"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editEmailText" />
 
         <TextView
             android:id="@+id/passSecTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="Повтори \nпароль:"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/registrationButton"
             app:layout_constraintEnd_toStartOf="@+id/editPassSecText"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.306"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.546" />
+            app:layout_constraintVertical_bias="0.552" />
 
         <EditText
             android:id="@+id/editPassSecText"
             android:layout_width="208dp"
             android:layout_height="32dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="252dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="240dp"
             android:background="@drawable/rounded_background"
             android:ems="10"
             android:inputType="textPassword"
             android:textColor="#000000"
             app:layout_constraintBottom_toTopOf="@+id/registrationButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPassText" />
+            app:layout_constraintHorizontal_bias="0.921"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPassText"
+            app:layout_constraintVertical_bias="0.952" />
 
         <Button
             android:id="@+id/registrationButton"
@@ -173,6 +184,7 @@
             android:background="@drawable/button_style_background"
             android:backgroundTint="#00BCD4"
             android:text="Зарегистрироваться"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

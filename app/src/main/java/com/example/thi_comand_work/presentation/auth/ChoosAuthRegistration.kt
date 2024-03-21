@@ -1,4 +1,4 @@
-package com.example.thi_comand_work.presentation
+package com.example.thi_comand_work.presentation.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -33,6 +33,10 @@ class ChoosAuthRegistration : Fragment() {
             //todo open ForgotPassFragment
             textViewForgotPass.setOnClickListener {
                 openFragment(ForgotPassFragment.newInstance())
+            }
+            //todo open next activity
+            buttonSingIn.setOnClickListener {
+             //todo open next activity
             }
         }
     }

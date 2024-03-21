@@ -1,4 +1,4 @@
-package com.example.thi_comand_work.presentation
+package com.example.thi_comand_work.presentation.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
