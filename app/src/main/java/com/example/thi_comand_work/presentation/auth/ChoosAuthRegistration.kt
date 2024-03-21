@@ -1,5 +1,6 @@
 package com.example.thi_comand_work.presentation.auth
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.thi_comand_work.R
 import com.example.thi_comand_work.databinding.FragmentChoosAuthRegistrationBinding
+import com.example.thi_comand_work.presentation.singIn.MainSingInActivity
 
 class ChoosAuthRegistration : Fragment() {
     private lateinit var binding: FragmentChoosAuthRegistrationBinding
@@ -36,7 +38,9 @@ class ChoosAuthRegistration : Fragment() {
             }
             //todo open next activity
             buttonSingIn.setOnClickListener {
-             //todo open next activity
+                val intent = Intent(activity, MainSingInActivity::class.java)
+                requireContext().startActivity(intent)
+                activity?.finish()
             }
         }
     }
