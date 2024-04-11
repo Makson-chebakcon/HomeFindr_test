@@ -4,10 +4,22 @@
     tools:showIn = "navigation_view">
     <item android:title="">
         <menu>
-            <item android:id="@+id/menuProfile" android:title="Профиль" android:icon="@drawable/profile_icon_menu"></item>
-            <item android:id="@+id/menuCardList" android:title="Лента объявлений" android:icon="@drawable/card_list_icon_menu"></item>
-            <item android:id="@+id/menuChat" android:title="Чат" android:icon="@drawable/chat_icon_menu"></item>
-            <item android:id="@+id/menuSetings" android:title="Настройки" android:icon="@drawable/setings_icon_menu"></item>
+            <item
+                android:id="@+id/menuProfile"
+                android:icon="@drawable/profile_icon_menu"
+                android:title="@string/nav_menu_profile"></item>
+            <item
+                android:id="@+id/menuCardList"
+                android:icon="@drawable/card_list_icon_menu"
+                android:title="@string/nav_menu_cads_list"></item>
+            <item
+                android:id="@+id/menuChat"
+                android:icon="@drawable/chat_icon_menu"
+                android:title="@string/nav_menu_chat"></item>
+            <item
+                android:id="@+id/menuSetings"
+                android:icon="@drawable/setings_icon_menu"
+                android:title="@string/nav_menu_settings"></item>
         </menu>
 
 

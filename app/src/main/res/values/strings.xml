@@ -3,4 +3,32 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main_sing_in">MainSingInActivity</string>
+    <!--TODO: fragment_choos_auth_registration -->
+    <string name="welcome_to_app">Welcome to </string>
+    <string name="welcome_login">Login</string>
+    <string name="welcome_pass">Pass</string>
+    <string name="welcome_sign_in">Sign in</string>
+    <string name="welcome_sign_up">Sign up</string>
+    <string name="welcome_forgot_pass">Forgot your password?</string>
+    <!--TODO: fragment_registration -->
+    <string name="sign_up">Registration:</string>
+    <string name="sign_up_fist_name">Fist name:</string>
+    <string name="sign_up_second_name">Second name:</string>
+    <string name="sign_up_email">Email:</string>
+    <string name="sign_up_pass">Pass:</string>
+    <string name="sign_up_repeat_pass">Repeat pass:</string>
+    <string name="sing_up_button">Sign up</string>
+    <!--TODO: fragment_profile -->
+    <string name="profile_ads">Ads</string>
+    <!--TODO: fragment_cards_list -->
+    <string name="cards_list_edit_text">Enter a request</string>
+    <string name="cards_list_search_button">Search</string>
+    <!--TODO: fragment_navigation_menu -->
+    <string name="nav_menu_profile">Profile</string>
+    <string name="nav_menu_cads_list">Card list</string>
+    <string name="nav_menu_chat">Chat</string>
+    <string name="nav_menu_settings">Settings</string>
+    <!--TODO: fragment_settings -->
+    <string name="settings_language">Language</string>
+    <string name="settings_language_switch">English</string>
 </resources>

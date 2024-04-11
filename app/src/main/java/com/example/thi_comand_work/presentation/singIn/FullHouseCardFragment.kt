@@ -6,11 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.thi_comand_work.R
-import com.example.thi_comand_work.databinding.ActivityMainBinding
 
 
-class ChatListFragment : Fragment() {
-    private lateinit var binding: ActivityMainBinding
+
+class FullHouseCardFragment : Fragment() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,15 +22,13 @@ class ChatListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat_list, container, false)
+        return inflater.inflate(R.layout.fragment_full_house_card, container, false)
     }
 
     companion object {
 
-
         @JvmStatic
-        fun newInstance() = ChatListFragment()
-
+        fun newInstance() = FullHouseCardFragment()
 
     }
 }

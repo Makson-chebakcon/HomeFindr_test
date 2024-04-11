@@ -9,7 +9,8 @@
         android:icon="@drawable/logo_icon_app"
         android:roundIcon="@drawable/logo_icon_app"
         android:supportsRtl="true"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        >
         <activity
             android:name=".presentation.singIn.MainSingInActivity"
             android:exported="false"

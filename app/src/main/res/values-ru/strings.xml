@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">HomeFindr</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_sing_in">MainSingInActivity</string>
+    <!--TODO: fragment_choos_auth_registration -->
+    <string name="welcome_to_app">Добро пожаловать в</string>
+    <string name="welcome_login">Логин</string>
+    <string name="welcome_pass">Пароль</string>
+    <string name="welcome_sign_in">Войти</string>
+    <string name="welcome_sign_up">Зарегистрироваться</string>
+    <string name="welcome_forgot_pass">Забыли пароль?</string>
+    <!--TODO: fragment_registration -->
+    <string name="sign_up">Регистрация:</string>
+    <string name="sign_up_fist_name">Имя:</string>
+    <string name="sign_up_second_name">Фамилия:</string>
+    <string name="sign_up_email">Почта:</string>
+    <string name="sign_up_pass">Пароль:</string>
+    <string name="sign_up_repeat_pass">Повторите пароль:</string>
+    <string name="sing_up_button">Зарегистрироваться</string>
+    <!--TODO: fragment_profile -->
+    <string name="profile_ads">Объявления</string>
+    <!--TODO: fragment_cards_list -->
+    <string name="cards_list_edit_text">Введите запрос</string>
+    <string name="cards_list_search_button">Поиск</string>
+    <!--TODO: fragment_navigation_menu -->
+    <string name="nav_menu_profile">Профиль</string>
+    <string name="nav_menu_cads_list">Лента объявлений</string>
+    <string name="nav_menu_chat">Чат</string>
+    <string name="nav_menu_settings">Настройки</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_language_switch">Русский</string>
+</resources>
