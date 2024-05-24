@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary branding color for the app -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <!-- Style for buttons -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_style_background</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+    </style>
+
+    <!-- Style for text views -->
+    <style name="TextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Style for container layouts -->
+    <style name="ContainerStyle">
+        <item name="android:padding">16dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorBackground</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <!-- Фон -->
+        <item name="android:background">@drawable/edit_text_background</item>
+        <!-- Цвет текста -->
+        <item name="android:textColor">@color/blue</item>
+        <!-- Цвет подчеркивания при активации -->
+        <!-- Рамка -->
+        <item name="android:padding">8dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <!-- Размер текста -->
+        <item name="android:textSize">16sp</item>
+        <!-- Удаление подчеркивания при фокусе -->
+        <!-- Удаление подчеркивания -->
+        <item name="android:backgroundTintMode">multiply</item>
+    </style>
+
+
+
+    <!-- styles.xml -->
+    <style name="NavigationMenuStyle">
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <!-- Дополнительные стили, например, для выделенных элементов, навигационных заголовков и т. д. -->
+    </style>
+
+
+
+</resources>

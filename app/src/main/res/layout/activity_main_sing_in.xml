@@ -12,6 +12,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ContainerStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -41,9 +42,10 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"
+        style="@style/NavigationMenuStyle"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
 
+        android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/nav_men" />
 

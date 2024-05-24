@@ -5,5 +5,6 @@ data class User (
     val sur_name: String,
     val object_home:List<Int>,
     val email: String,
-    val img_url: String
+    val img_url: String,
+    val likeOrders: List<Int>
 )
