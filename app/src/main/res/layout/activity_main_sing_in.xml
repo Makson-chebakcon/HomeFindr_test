@@ -8,26 +8,35 @@
 
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
+
     tools:context=".presentation.singIn.MainSingInActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/ContainerStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:alpha="50"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tbMainScreen"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/tool_bar_background"
             android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             app:menu="@menu/tool_bar"
             app:navigationIcon="@drawable/logo_icon_app_ver_low"
             app:title="@string/app_name"
             app:titleTextColor="#000000" />
+
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
@@ -35,8 +44,10 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tbMainScreen" />
+            app:layout_constraintTop_toBottomOf="@+id/tbMainScreen"
+            app:layout_constraintVertical_bias="1.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,7 +57,7 @@
         android:layout_width="wrap_content"
 
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="end"
         app:menu="@menu/nav_men" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -1,75 +1,84 @@
 package com.example.thi_comand_work.presentation.singIn.cardList
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import com.example.thi_comand_work.R
 import com.example.thi_comand_work.domain.objects.House
 import com.example.thi_comand_work.presentation.singIn.FullHouseCardFragment
 import com.example.thi_comand_work.presentation.singIn.MainSingInActivity
 
-class CardsAdapter(val houseList: MutableList<House>, context: Context):
+class CardsAdapter(private val houseList: MutableList<House>, private val context: Context) :
     RecyclerView.Adapter<CardsAdapter.ContactHolder>() {
 
-    val _context: Context = context
     class ContactHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var tvImgPrev: ImageView
-        var tvName: TextView
-        var tvPrice: TextView
-        var tvStatusPrice: ImageView
-        var tvAdress:TextView
-
-        init {
-            tvName = itemView.findViewById(R.id.nameCard)
-            tvPrice = itemView.findViewById(R.id.textPriceView)
-            tvImgPrev = itemView.findViewById(R.id.imageView)
-            tvStatusPrice = itemView.findViewById(R.id.recomImageView)
-            tvAdress = itemView.findViewById(R.id.textArdessView)
-        }
+        val tvImgPrev: ImageView = itemView.findViewById(R.id.imageView)
+        val tvName: TextView = itemView.findViewById(R.id.nameCard)
+        val tvPrice: TextView = itemView.findViewById(R.id.textPriceView)
+        val tvStatusPrice: ImageView = itemView.findViewById(R.id.recomImageView)
+        val tvAdress: TextView = itemView.findViewById(R.id.textArdessView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.card_home_shablon, parent, false)
-        val holder = ContactHolder(view)
+        return ContactHolder(view).apply {
+            itemView.setOnClickListener {
+                val pos = adapterPosition
+                if (pos != RecyclerView.NO_POSITION) {
+                    val scaleXUp = ObjectAnimator.ofFloat(itemView, "scaleX", 1.2f)
+                    val scaleYUp = ObjectAnimator.ofFloat(itemView, "scaleY", 1.2f)
+                    val scaleXDown = ObjectAnimator.ofFloat(itemView, "scaleX", 1.0f)
+                    val scaleYDown = ObjectAnimator.ofFloat(itemView, "scaleY", 1.0f)
 
-        view.setOnClickListener {
-            val pos = holder.adapterPosition
-            if (pos != RecyclerView.NO_POSITION) {
-                val house = houseList[pos]
-                val context = _context as MainSingInActivity
-                context.openFragment(FullHouseCardFragment.newInstance(house))
-                onItemClickListener?.invoke(pos)
+                    val animatorSet = AnimatorSet().apply {
+                        play(scaleXUp).with(scaleYUp)
+                        play(scaleXDown).with(scaleYDown).after(scaleXUp)
+                        duration = 300
+                        interpolator = FastOutSlowInInterpolator()
+                        addListener(object : AnimatorListenerAdapter() {
+                            override fun onAnimationEnd(animation: Animator) {
+                                val house = houseList[pos]
+                                val context = itemView.context as MainSingInActivity
+                                context.openCardFragment(FullHouseCardFragment.newInstance(house))
+                                onItemClickListener?.invoke(pos)
+                            }
+                        })
+                    }
+
+                    animatorSet.start()
+                }
             }
         }
-
-        return holder
     }
-
-
-
-
 
     override fun onBindViewHolder(holder: ContactHolder, position: Int) {
-        holder.tvName.text = houseList[position].name
-        holder.tvAdress.text =houseList[position].address
+        val house = houseList[position]
+        holder.tvName.text = house.name
+        holder.tvAdress.text = house.address
         holder.tvStatusPrice.setImageResource(R.drawable.big_price)
+        holder.tvPrice.text = house.price.toString()
         //holder.tvImgPrev.imageMatrix = todo подкачка изображений!!!
-        holder.tvPrice.text = houseList[position].price.toString()
     }
-    override fun getItemCount(): Int {
-        return houseList.size
+
+    override fun getItemCount(): Int = houseList.size
+
+    private var onItemClickListener: ((Int) -> Unit)? = null
+
+    fun setOnItemClickListener(listener: (Int) -> Unit) {
+        onItemClickListener = listener
     }
-    private var onItemClickListener: ((Int)->Unit)? = null
-    fun setOnItemClickListener(f: (Int) -> Unit) { onItemClickListener = f }
-
-
-
 }
+
 interface OnItemClickListener {
     fun onItemClick(position: Int)
 }

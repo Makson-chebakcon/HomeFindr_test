@@ -21,6 +21,7 @@
             android:layout_marginTop="72dp"
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/welcome_to_app"
+            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="34sp"
             android:typeface="normal"
@@ -46,7 +47,7 @@
                 android:src="@drawable/logo" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/filter2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -65,7 +66,7 @@
             android:ems="10"
             android:hint="@string/welcome_login"
             android:includeFontPadding="false"
-            android:inputType="text|textEmailAddress"
+            android:inputType="number"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -120,6 +121,7 @@
                 android:gravity="center"
                 android:onClick="onClikRegistration"
                 android:text="@string/welcome_sign_up"
+                android:textAlignment="center"
                 android:textColor="#2196F3" />
 
             <TextView

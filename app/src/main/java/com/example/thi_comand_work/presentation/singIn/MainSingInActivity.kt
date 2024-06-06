@@ -52,7 +52,7 @@ class MainSingInActivity : AppCompatActivity() {
         binding.tbMainScreen.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId){
                 R.id.menuIcon ->{
-                    binding.draver.openDrawer(GravityCompat.START)
+                    binding.draver.openDrawer(GravityCompat.END)
                     true
                 }
                 else -> false
@@ -62,22 +62,22 @@ class MainSingInActivity : AppCompatActivity() {
             when(menuItem.itemId){
                 R.id.menuProfile ->{
                     openFragment(ProfileFragment.newInstance())
-                    binding.draver.closeDrawer(GravityCompat.START)
+                    binding.draver.closeDrawer(GravityCompat.END)
                     true
                 }
                 R.id.menuCardList ->{
                     openFragment(CardsListFragment.newInstance())
-                    binding.draver.closeDrawer(GravityCompat.START)
+                    binding.draver.closeDrawer(GravityCompat.END)
                     true
                 }
                 R.id.menuSetings ->{
                     openFragment(SettingsFragment.newInstance())
-                    binding.draver.closeDrawer(GravityCompat.START)
+                    binding.draver.closeDrawer(GravityCompat.END)
                     true
                 }
                 R.id.menuChat ->{
                     openFragment(ChatListFragment.newInstance())
-                    binding.draver.closeDrawer(GravityCompat.START)
+                    binding.draver.closeDrawer(GravityCompat.END)
                     true
                 }
 
@@ -93,9 +93,9 @@ class MainSingInActivity : AppCompatActivity() {
 
     fun openFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerView, fragment).commit()
+            .replace(R.id.fragmentContainerView, fragment).addToBackStack(null).commit()
     }
-    fun withParOpenFragment(fragment: Fragment) {
+    fun openCardFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView, fragment)
             .addToBackStack(null)

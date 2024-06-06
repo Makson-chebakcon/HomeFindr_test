@@ -5,7 +5,7 @@
     <string name="title_activity_main_sing_in">MainSingInActivity</string>
     <!--TODO: fragment_choos_auth_registration -->
     <string name="welcome_to_app">Welcome to </string>
-    <string name="welcome_login">Login</string>
+    <string name="welcome_login">Phone</string>
     <string name="welcome_pass">Pass</string>
     <string name="welcome_sign_in">Sign in</string>
     <string name="welcome_sign_up">Sign up</string>

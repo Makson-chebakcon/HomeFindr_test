@@ -2,16 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/ContainerStyle"
+    style="@style/CardListStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.singIn.cardList.CardsListFragment">
+
+    <!-- Затемняющий вид, занимающий весь экран -->
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,10 +26,10 @@
         <EditText
             android:id="@+id/serchEditText"
             style="@style/EditTextStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:ems="10"
             android:freezesText="false"
             android:hint="@string/cards_list_edit_text"
@@ -33,20 +37,24 @@
             android:padding="1dp"
             android:paddingStart="10dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintBaseline_toTopOf="parent" />
+            tools:ignore="TouchTargetSizeCheck" />
 
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/serch" />
 
-        <Button
+        <ImageView
             android:id="@+id/filter"
-            style="@style/ButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/cards_list_search_button"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp" />
-
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/filter" />
     </LinearLayout>
 
     <ScrollView
@@ -55,15 +63,14 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCardList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:padding="16dp" />
     </ScrollView>
 
     <FrameLayout
@@ -76,11 +83,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.97">
 
-        <Button
+        <ImageView
             android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:background="@drawable/add_cards_image" />
+            android:layout_width="82dp"
+            android:layout_height="78dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/add_cards_image" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dimView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,52 +17,39 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
             android:text="@string/sign_up"
+            android:textColor="#000000"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.116"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editPhoneText"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.041" />
+            app:layout_constraintVertical_bias="0.04" />
 
         <EditText
-            android:id="@+id/editNameText"
+            android:id="@+id/editPhoneText"
             style="@style/EditTextStyle"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:autoText="false"
             android:background="@drawable/rounded_background"
             android:ems="10"
-            android:hint="@string/sign_up_fist_name"
-            android:inputType="text"
+            android:hint="Номер телефона"
+            android:hyphenationFrequency="none"
+            android:inputType="phone"
             android:minHeight="48dp"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.060000002" />
-
-        <EditText
-            android:id="@+id/editSecondNameText"
-            style="@style/EditTextStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_background"
-            android:ems="10"
-            android:hint="@string/sign_up_second_name"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.16000003" />
+            app:layout_constraintVertical_bias="0.071" />
 
         <EditText
             android:id="@+id/editEmailText"
             style="@style/EditTextStyle"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_background"
             android:ems="10"
@@ -72,14 +59,15 @@
             android:textColor="#060606"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.24000001" />
+            app:layout_constraintVertical_bias="0.167" />
 
         <EditText
             android:id="@+id/editPassText"
             style="@style/EditTextStyle"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_background"
             android:ems="10"
@@ -89,14 +77,15 @@
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.32999998" />
+            app:layout_constraintVertical_bias="0.252" />
 
         <EditText
             android:id="@+id/editPassSecText"
             style="@style/EditTextStyle"
-            android:layout_width="0dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_background"
             android:ems="10"
@@ -106,23 +95,24 @@
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.42000002" />
+            app:layout_constraintVertical_bias="0.337" />
 
         <Button
             android:id="@+id/registrationButton"
-            android:background="@drawable/button_style_background"
             style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_style_background"
             android:text="@string/sing_up_button"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/namePageTextView"
-            app:layout_constraintVertical_bias="0.58000004" />
+            app:layout_constraintVertical_bias="0.7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

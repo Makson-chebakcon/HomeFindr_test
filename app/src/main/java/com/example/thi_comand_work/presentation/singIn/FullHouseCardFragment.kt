@@ -38,9 +38,6 @@ class FullHouseCardFragment : Fragment() {
             binding.textView10.text = house.owner
 
         }
-
-
-
     }
 
     companion object {

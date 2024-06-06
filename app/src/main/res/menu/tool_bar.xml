@@ -2,13 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/menuIcon"
         android:checkable="true"
         android:icon="@drawable/baseline_dehaze_24"
         android:title="menuIcon"
         android:visible="true"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:background="@drawable/background_house"/>
 
 
 </menu>

@@ -32,12 +32,16 @@
         <item name="android:orientation">vertical</item>
         <item name="android:background">@color/colorBackground</item>
     </style>
+    <style name="CardListStyle">
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/colorBackground</item>
+    </style>
 
     <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
         <!-- Фон -->
         <item name="android:background">@drawable/edit_text_background</item>
         <!-- Цвет текста -->
-        <item name="android:textColor">@color/blue</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
         <!-- Цвет подчеркивания при активации -->
         <!-- Рамка -->
         <item name="android:padding">8dp</item>
@@ -59,6 +63,12 @@
         <!-- Дополнительные стили, например, для выделенных элементов, навигационных заголовков и т. д. -->
     </style>
 
+    <style name="CustomDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item> <!-- Уровень затемнения (от 0.0 до 1.0) -->
+    </style>
 
 
 </resources>
